@@ -1,0 +1,81 @@
+.container{
+  display: grid;
+  grid-template-columns: [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end];
+  grid-template-rows: 3.6255vw min-content 50rem repeat(5, min-content);
+      @media only screen and (max-width: $mobile_resolution){
+        grid-template-rows: 3.6255vw min-content 150rem repeat(5, min-content);
+      }
+}
+.home{
+  display: grid;
+  grid-template-rows: repeat(3,min-content);
+  &__item{
+    grid-template-columns:  min-content  minmax(27rem,1fr) min-content;
+    grid-template-rows: 60rem 1fr 1fr;
+    @media only screen and (max-width: 900px){
+      grid-template-columns: 1fr ;
+      grid-template-rows: repeat(3,min-content) ;
+    }
+  }
+  @media only screen and (max-width: 375px){
+      grid-template-columns:1fr;
+     grid-template-rows: repeat(3,min-content);
+  }
+}
+.collage{
+  display: grid;
+  grid-template-columns:repeat(auto-fill,minmax(36rem,1fr));
+
+  grid-template-rows: min-content;
+  @media only screen and (max-width:1440px){
+      grid-template-columns:repeat(auto-fill,minmax(30rem,auto));
+  }
+
+  @media only screen and (max-width: $mobile_resolution){
+      grid-template-columns:min-content;
+      grid-template-rows: repeat(4,min-content);
+  }
+&__item{
+    display: grid;
+      grid-template-columns:3vw repeat(auto-fit , minmax(15vw,1fr)) 3vw ;
+      grid-template-rows:  min-content min-content min-content ;
+      @media only screen and (max-width: 480px){
+        grid-template-columns:10vw repeat(auto-fit , minmax(80vw,1fr)) 10vw ;
+      }
+      }
+}
+.features{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(25rem,1fr));
+  grid-template-rows: min-content;
+  @media only screen and (max-width: 1100px){
+    grid-template-columns:min-content;
+    grid-template-rows: repeat(3,min-content);
+  }
+}
+.feature{
+  display: grid;
+  grid-gap: 2rem;
+  @media only screen and (max-width: 1100px){
+     grid-template-columns: min-content minmax(80vw, 1fr) min-content;
+  }
+ grid-template-columns: min-content minmax(25vw, 1fr) min-content;
+ grid-template-rows: 10vh 2rem 1fr;
+}
+.footer{
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: min-content;
+
+  &__menu{
+    display: grid;
+    grid-template-columns: minmax(16rem,max-content) repeat(auto-fit,minmax(15rem,1fr));
+    grid-template-rows: repeat(4,min-content);
+    @media only screen and (max-width: 1000px){
+    grid-template-columns: minmax(32rem,max-content) repeat(auto-fit,minmax(15rem,1fr));
+    }
+    @media only screen and (max-width:600px){
+      grid-template-columns:1fr min-content 1fr;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.collage{
+  grid-column: full-start / full-end;
+  grid-row:3 / 5;
+  @media only screen and (max-width: 480px){
+    grid-column-gap: 4rem;
+  }
+  &__image{
+    height:50rem;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: bottom;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1 ;
+    background-size: cover;
+
+    @media only screen and (max-width: $mobile_resolution){
+      width: 100vw;
+      height: 100vw;
+    }
+    position: relative;
+    z-index: 10;
+    &--1{
+      background-image: url(../../assets/stories/desktop/mountains.jpg);
+      @media only screen and (max-width:$mobile_resolution){
+        background-image: url(../../assets/stories/mobile/mountains.jpg);
+      }
+
+    }
+    &--2{
+      background-image: url(../../assets/stories/desktop/cityscapes.jpg);
+      @media only screen and (max-width:$mobile_resolution){
+        background-image: url(../../assets/stories/mobile/cityscapes.jpg);
+      }
+    }
+    &--3{
+          background-image: url(../../assets/stories/desktop/18-days-voyage.jpg);
+      @media only screen and (max-width:$mobile_resolution){
+        background-image: url(../../assets/stories/mobile/18-days-voyage.jpg);
+      }
+    }
+    &--4{
+              background-image: url(../../assets/stories/desktop/architecturals.jpg);
+        @media only screen and (max-width: $mobile_resolution){
+          background-image: url(../../assets/stories/mobile/architecturals.jpg);
+
+        }
+      }
+    }
+  &__item{
+   transform: translateY(0);
+    justify-items:stretch;
+
+  }
+  &__label{
+    display: grid;
+    grid-row:3 /4;
+    grid-column:2 / span 1;
+    color:$color-white;
+
+    padding-bottom: 1.5rem;
+    @media only screen and (max-width: 719px){
+      padding-bottom: 4.5rem;
+      grid-column:2 / span 2;
+      // padding: 0 4rem;
+    }
+    @media only screen and (max-width: 480px){
+      grid-column:2 / span 1;
+      // padding: 0 4rem;
+    }
+    @media only screen and (max-width: $mobile_resolution){
+      grid-column-gap: 2rem;
+      grid-row:3 /4;
+      grid-column:2 / span 1;
+    }
+    &--text{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2rem;
+      border-bottom: 1.5px solid rgba($color-grey, .4);
+      position: relative;
+      z-index: 20;
+    }
+    & span{
+    width: 100%;
+    text-align: left;
+    }
+  }
+}

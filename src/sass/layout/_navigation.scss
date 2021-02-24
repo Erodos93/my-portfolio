@@ -1,0 +1,110 @@
+
+.header{
+//////FUNCTIONALITY
+  @media only screen and (max-width: 42.375em){
+    padding: 0;
+  }
+  &__btn:visited &__icon{
+
+  	position: relative;
+  	top: 0px;
+  	width: 100%;
+  	z-index: 100;
+
+  }
+}
+
+.mobile{
+  &__logo{
+        @media only screen and (max-width: 42.375em){
+    position: absolute;
+    top: -4.3rem;
+    left: 2rem;
+    z-index: 100;
+  }
+
+  }
+  &__links{
+    @media only screen and (max-width:42.375em){
+      flex-direction: column;
+      // text-align: center;
+      width: 80%;
+      align-items: center;
+    }
+  }
+  &__list{
+    @media only screen and (max-width:42.375em){
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    perspective:1000px;
+    align-items: center;
+    justify-content: center;
+    // position: absolute;
+    text-align: center;
+    width:100%;
+    z-index: 100;
+}
+
+  }
+  &__nav{
+    @media only screen and (max-width:42.375em){
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      width: 100%;
+      height: 0;
+      position: fixed;
+      background-color: rgba($color-dark, 0.5);
+      z-index: 30;
+      top:7rem;
+      transition: height .3s;
+    }
+
+
+  }
+
+  &__btn{
+        @media only screen and (max-width: 42.375em){
+          align-self: stretch;
+          width: auto;
+    display: none;
+    opacity: 0;
+    animation: slideDown .3s  .24s ease-in-out forwards;
+    margin: 3rem 4rem 4rem;
+    cursor: pointer;
+  }
+
+  }
+  &__link{
+      @media only screen and (max-width: 42.375em){
+      display:none;
+      text-transform: uppercase;
+       opacity: 0;
+      padding:2.5rem;
+  }
+
+  }
+
+}
+@for $num from 1 to 4 {
+
+  .mobile__link--#{$num}{
+        @media only screen and (max-width: 42.375em){
+       animation: slideDown .3s ($num * .06s) ease-in-out forwards;
+
+       @if $num/3 == 1{
+         border-bottom: 1px solid black;
+         width: 80%;
+       }
+}
+&:hover{
+  color: $color-grey;
+}
+
+
+  }
+}

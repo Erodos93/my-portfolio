@@ -1,0 +1,188 @@
+.btn{
+  align-items: flex-end;
+  cursor:pointer;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  width: 100%;
+  &:focus,
+  &:active{
+    outline: none;
+  }
+
+
+  &::after{
+    content: "";
+    background-image: url(../../assets/shared/desktop/arrow.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    border: none;
+    width: 9rem;
+    padding-right: 1rem;
+    height: 1.5rem;
+    transform: scale(1);
+  }
+  &__active{
+    &:focus,
+    &:active{
+      outline: none;
+    }
+    &:hover::after{
+      background-position: 3rem 0;
+
+      transform: scale(1.5);
+      transition: all .2s;
+    }
+    &:hover span{
+      text-decoration: underline;
+    }
+  }
+
+  &__dark{
+  padding:1rem 2rem;
+  background-color: $color-dark;
+  color: $color-white;
+  text-transform: uppercase;
+  border: none;
+  &:hover{
+  background-color: $color-grey;
+  text-decoration: underline;
+  color: $color-dark;
+  outline: none;
+  }
+  }
+
+
+
+  &__color{
+    &--white{
+      color:$color-white;
+      &::after{
+        filter: invert(1);
+      }
+      &>*:not(:first-child){
+        filter:invert(1);
+      }
+      background-color: rgba($color-dark, 0);
+    }
+    &--dark{
+      color: $color-dark;
+      background-color: transparent;
+    }
+
+  }
+}
+.menu{
+  &__checkbox{
+    display: none;
+  }
+  &__btn{
+    display: none;
+
+    @media only screen and (max-width: 42.375em){
+      // top: 20px;
+      right: 0;
+      @include button(5rem,5rem);
+      position: fixed;
+      margin-right:2.5rem;
+
+    }
+
+  }
+
+
+  &__icon{
+    display: block;
+      @media only screen and (max-width:42.375em){
+    &::after,
+    &::before{
+      content: "";
+      width: 2.5rem;
+      height: 1px;
+      display: block;
+      position: absolute;
+
+      transform: rotate(0);
+      background-color: black;
+      transition: all .2s;
+      top: 2.3rem;
+      left:1.25rem;
+
+
+    }
+    &::before{
+      transform: rotate(0) translateY(-.5rem);
+
+    }
+    &::after{
+      transform: rotate(0) translateY(.5rem);
+    }
+  }
+}
+}
+
+.collage{
+  &__btn{
+    grid-column: 2 / -1;
+     grid-row: 2 / 4 ;
+     z-index: 20;
+      padding: 1.2rem 0;
+      &::after{
+        background-position: right;
+        width: 100%;
+      }
+  }
+  &:hover &__item:hover{
+    &::after{
+      content: "";
+      background-image: $pallete-color-shadow;
+      height: .6rem;
+      grid-row: 4 /5;
+      grid-column: 1 / -1;
+      margin-bottom: -0.6rem;
+
+    }
+
+    transform: translateY(-50px);
+    transition: all .5s;
+  }
+}
+
+.close{
+  &__checkbox{
+    display: none;
+  }
+  &__btn{
+    @include button(3rem,3rem);
+    position: relative;
+    top: -3rem;
+    left: 28rem;
+
+  }
+  &__icon{
+
+      &::after,
+      &::before{
+        content: "";
+        width: 1.5rem;
+        height: 1px;
+        display: block;
+        position: absolute;
+
+        transform: rotate(0);
+        background-color: red;
+        transition: all .2s;
+        top: 1.5rem;
+        left:.8rem;
+
+
+      }
+      &::before{
+        transform: rotate(45deg) translateY(0) ;
+      }
+      &::after{
+        transform: rotate(-45deg) translateY(0);
+      }
+    }
+}

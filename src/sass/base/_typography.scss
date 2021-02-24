@@ -1,0 +1,24 @@
+
+
+.header-large-1,
+.header-large-2{
+  display: inline-block;
+  @include font-larger;
+}
+.header-2{
+    display: inline-block;
+  @include  font-large;
+}
+.header-3{
+    display: inline-block;
+  @include  font-small;
+}
+.header-4{
+    display: inline-block;
+  @include  font-smaller;
+}
+
+.text-body{
+  display: inline-block;
+    @include  font-body;
+}

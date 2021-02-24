@@ -1,0 +1,40 @@
+.header{
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:fixed;
+    height: 7.2rem;
+    width: 100%;
+    z-index: 100;
+    background-color: $color-white;
+  &__links{
+
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav{
+
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    align-items: center;
+    width: 100%;
+  }
+  &__list{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 54%;
+  }
+  &__btn{
+    cursor: pointer;
+  
+  }
+  &__link{
+    padding-right:15%;
+    display: inline-block;
+    color: $color-dark;
+  }
+
+}

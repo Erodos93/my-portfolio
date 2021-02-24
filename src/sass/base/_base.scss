@@ -1,0 +1,21 @@
+
+$mobile_resolution:23.5em;
+$tablet_resolution:48em;
+$desktop_resolution:90.06em;
+
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  font-size: 62.5%;
+  font-family: "DM Sans",sans-serif;
+
+  @media only screen and (max-width: 1000px){
+    font-size: 50%;
+  }
+}

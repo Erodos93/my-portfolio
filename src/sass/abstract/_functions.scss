@@ -1,0 +1,51 @@
+.menu{
+
+  &__checkbox:checked{
+    //TRANSFORM ICON IMAGE
+
+     + .menu__btn .menu__icon{
+        &::before{
+          transform: rotate(45deg) translateY(0) ;
+        }
+        &::after{
+          transform: rotate(-45deg) translateY(0);
+        }
+
+  }
+
+
+
+    //OPENED MENU
+    &~ .mobile__nav{
+      height: 87rem;
+      transition: height .5s;
+    }
+    //DISPLAYED LINKS
+    &~ .mobile__nav {
+      & .mobile__list {
+        & .mobile__link  {
+          display: block;
+        }
+      }
+    }
+    &~ .mobile__nav {
+      & .mobile__links {
+        & .mobile__link  {
+          display: block;
+        }
+
+    }
+    }
+    //CLOSED MENU
+    &:not(:checked) {
+      &~ .mobile__nav {
+
+        & .mobile__list{
+          height: 0;
+          width: 100%;
+          padding: 0 4rem;
+        }
+      }
+    }
+  }
+}

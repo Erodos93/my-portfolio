@@ -121,7 +121,24 @@
   }
 }
 }
+@for $i from 5 through 16{
+  .stories__big-collage{
+    &:hover &__item--#{$i}:hover{
+      &::after{
+        content: "";
+        background-image: $pallete-color-shadow;
+        height: .6rem;
+        grid-row: 4 /5;
+        grid-column: 1 / -1;
+        margin-bottom: -0.6rem;
 
+      }
+
+      transform: translateY(-50px);
+      transition: all .5s;
+    }
+  }
+}
 .collage{
   &__btn{
     grid-column: 2 / -1;

@@ -44,7 +44,7 @@
       }
       }
 }
-.features{
+.home-features{
   display: grid;
   grid-template-columns:repeat(auto-fit,minmax(25rem,1fr));
   grid-template-rows: min-content;
@@ -53,7 +53,7 @@
     grid-template-rows: repeat(3,min-content);
   }
 }
-.feature{
+.home-feature{
   display: grid;
   grid-gap: 2rem;
   @media only screen and (max-width: 1100px){

@@ -1,6 +1,6 @@
 import React from "react";
 import ItemMainContent from "./Home/ItemMainContent";
-import StoriesCollage from "./Collage/StoriesCollage";
+import HomeCollage from "./Collage/HomeCollage";
 import Features from "../components/Features";
 import {content} from "./Home/objectContentsData";
 const Home =()=>{
@@ -23,7 +23,7 @@ const Home =()=>{
         />
     })}
    </main>
-   <StoriesCollage/>
+   <HomeCollage/>
    <Features />
    </>
  );

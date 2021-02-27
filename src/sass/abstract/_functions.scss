@@ -49,3 +49,41 @@
     }
   }
 }
+//Float animation
+//Float Right-left
+
+.float{
+  &__center-to-leftSide{
+  animation: floatCLS 1.5s forwards;
+  backface-visibility: hidden;
+}
+  &__leftSide-to-center{
+  animation:  floatLSC 1.5s forwards;
+  backface-visibility: hidden;
+}
+&__rightSide-to-center{
+  animation: floatRSC 1.5s forwards;
+  backface-visibility: hidden;
+}
+&__down-to-up{
+  animation: floatDSUp 1.5s forwards;
+  backface-visibility: hidden;
+}
+&__up-to-down{
+  animation: floatUpDS 1.5s forwards;
+  backface-visibility: hidden;
+}
+&__rightSide-to-center{
+  animation: floatRSC 1.5s forwards;
+  backface-visibility: hidden;
+}
+}
+
+
+.disapere{
+  &__home-item{
+
+    animation: disapereHomeItem 1.5s forwards;
+    backface-visibility: hidden;
+  }
+}

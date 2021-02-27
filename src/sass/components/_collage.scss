@@ -1,3 +1,25 @@
+
+$nameImg:"mountains","cityscapes","18-days-voyage","architecturals","world-tour",
+"unforeseen-corners","king-on-africa","trip-to-nowhere","rage-of-the-sea",
+"running-free","behind-the-waves","calm-waters","milky-way","dark-forest",
+"somwarpet","land-of-dreams";
+
+@for $i from 1 through 4 {
+$name:nth($nameImg, $i);
+.collage__image{
+  &--#{$i}{
+   @include storyCard("../../assets/stories/desktop/#{$name}.jpg","../../assets/stories/mobile/#{$name}.jpg ");
+  }
+}
+}
+@for $i from 5 through 16 {
+$name:nth($nameImg, $i);
+.stories__big-collage__image{
+  &--#{$i}{
+   @include storyCard("../../assets/stories/desktop/#{$name}.jpg","../../assets/stories/mobile/#{$name}.jpg ");
+  }
+}
+}
 .collage{
   grid-column: full-start / full-end;
   grid-row:3 / 5;
@@ -19,36 +41,11 @@
     }
     position: relative;
     z-index: 10;
-    &--1{
-      background-image: url(../../assets/stories/desktop/mountains.jpg);
-      @media only screen and (max-width:$mobile_resolution){
-        background-image: url(../../assets/stories/mobile/mountains.jpg);
-      }
-
-    }
-    &--2{
-      background-image: url(../../assets/stories/desktop/cityscapes.jpg);
-      @media only screen and (max-width:$mobile_resolution){
-        background-image: url(../../assets/stories/mobile/cityscapes.jpg);
-      }
-    }
-    &--3{
-          background-image: url(../../assets/stories/desktop/18-days-voyage.jpg);
-      @media only screen and (max-width:$mobile_resolution){
-        background-image: url(../../assets/stories/mobile/18-days-voyage.jpg);
-      }
-    }
-    &--4{
-              background-image: url(../../assets/stories/desktop/architecturals.jpg);
-        @media only screen and (max-width: $mobile_resolution){
-          background-image: url(../../assets/stories/mobile/architecturals.jpg);
-
-        }
-      }
     }
   &__item{
    transform: translateY(0);
     justify-items:stretch;
+    cursor: pointer;
 
   }
   &__label{
@@ -61,11 +58,11 @@
     @media only screen and (max-width: 719px){
       padding-bottom: 4.5rem;
       grid-column:2 / span 2;
-      // padding: 0 4rem;
+
     }
     @media only screen and (max-width: 480px){
       grid-column:2 / span 1;
-      // padding: 0 4rem;
+
     }
     @media only screen and (max-width: $mobile_resolution){
       grid-column-gap: 2rem;

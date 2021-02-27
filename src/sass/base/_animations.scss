@@ -11,3 +11,77 @@
   }
 
 }
+@keyframes floatRSC{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+
+    transform: translateX(0%);
+  }
+}
+@keyframes floatCLS{
+  0%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+
+    transform: translateX(-200%);
+  }
+}
+@keyframes floatLSC{
+  0%{
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+
+    transform: translateX(0%);
+  }
+}
+
+@keyframes floatDSUp{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+
+    transform: translateY(25%);
+  }
+}
+@keyframes floatUpDS{
+  0%{
+    transform: translateY(25%);
+  }
+  100%{
+
+    transform: translateY(100%);
+  }
+}
+@keyframes disapereHomeItem{
+  0%{
+    opacity:1;
+    height: 65rem;
+  }
+  100%{
+  opacity:0;
+  height: 0;
+  }
+}
+@keyframes disapereStoriesItem{
+  0%{
+  opacity:0;
+  height: 0;
+  }
+  100%{
+    opacity:1;
+    height: 65rem;
+  }
+}

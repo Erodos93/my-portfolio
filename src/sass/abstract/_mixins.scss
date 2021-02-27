@@ -33,7 +33,7 @@
 }
 @mixin button($width ,$height){
   display: inline-block;
-  
+
   border: none;
   cursor: pointer;
   outline: none;
@@ -41,4 +41,10 @@
   border-radius: 50%;
   height: $height;
   width: $width;
+}
+@mixin storyCard($urlDesk,$urlMob){
+  background-image: url(#{$urlDesk});
+      @media only screen and (max-width:$mobile_resolution){
+        background-image: url(#{$urlMob});
+      }
 }

@@ -12,7 +12,7 @@ $name:nth($nameImg, $i);
   }
 }
 }
-@for $i from 5 through 16 {
+@for $i from 1 through 16 {
 $name:nth($nameImg, $i);
 .stories__big-collage__image{
   &--#{$i}{
@@ -23,6 +23,7 @@ $name:nth($nameImg, $i);
 .collage{
   grid-column: full-start / full-end;
   grid-row:3 / 5;
+  animation: floatRSC 1.3s ease-in-out forwards;
   @media only screen and (max-width: 480px){
     grid-column-gap: 4rem;
   }
@@ -30,11 +31,12 @@ $name:nth($nameImg, $i);
     height:50rem;
     background-repeat: no-repeat;
     object-fit: cover;
-    background-position: bottom;
+    filter: brightness(.82);
+    background-position: center;
     grid-column: 1 / -1;
     grid-row: 1 / -1 ;
     background-size: cover;
-
+    transition: height 1.5s;
     @media only screen and (max-width: $mobile_resolution){
       width: 100vw;
       height: 100vw;
@@ -46,6 +48,9 @@ $name:nth($nameImg, $i);
    transform: translateY(0);
     justify-items:stretch;
     cursor: pointer;
+    position: relative;
+    z-index: 20;
+
 
   }
   &__label{
@@ -80,6 +85,10 @@ $name:nth($nameImg, $i);
     & span{
     width: 100%;
     text-align: left;
+    }
+    &--date{
+      opacity: 0;
+      transition: opacity 1.5s;
     }
   }
 }

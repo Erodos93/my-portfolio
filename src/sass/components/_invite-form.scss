@@ -16,7 +16,8 @@
     color: white;
     align-items: center;
     justify-content: center;
-
+    border-radius: 100%;
+    animation: biggerScale 1s forwards;
   }
   &__form{
       display: flex;
@@ -24,6 +25,7 @@
     background-image:linear-gradient(to right top, gray 20%, darkgray 80%);
     padding:4rem 8rem 8rem;
     border-radius: 5%;
+
     label{
       font-size: 1.8rem;
     }

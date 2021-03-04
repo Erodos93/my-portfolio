@@ -15,9 +15,23 @@
   0%{
     transform: translateX(100%);
   }
+  10%{
+    opacity: 0;
+  }
   100%{
 
     transform: translateX(0%);
+  }
+}
+@keyframes floatCRS{
+  0%{
+    transform: translateX(0%);
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(100%);
   }
 }
 @keyframes floatCLS{
@@ -25,7 +39,7 @@
     transform: translateX(0%);
     opacity: 1;
   }
-  50%{
+  90%{
     opacity: 0;
   }
   100%{
@@ -38,7 +52,7 @@
     transform: translateX(-200%);
     opacity: 0;
   }
-  50%{
+  10%{
     opacity: 1;
   }
   100%{
@@ -53,35 +67,55 @@
   }
   100%{
 
-    transform: translateY(25%);
+    transform: translateY(0%);
   }
 }
 @keyframes floatUpDS{
   0%{
-    transform: translateY(25%);
+    transform: translateY(0%);
   }
   100%{
 
     transform: translateY(100%);
   }
 }
-@keyframes disapereHomeItem{
+@keyframes disapereItem{
   0%{
     opacity:1;
-    height: 65rem;
+    height:65rem;
+  }
+  50%{
+      height: 32rem;
   }
   100%{
   opacity:0;
   height: 0;
   }
 }
-@keyframes disapereStoriesItem{
+
+@keyframes biggerScale{
   0%{
   opacity:0;
-  height: 0;
   }
   100%{
     opacity:1;
-    height: 65rem;
+  }
+}
+@keyframes rotate{
+  0%{
+  transform: rotateX(90deg) rotateY(90deg);
+  }
+
+  100%{
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+@keyframes scrollItem{
+  0%{
+  width:0rem;
+  }
+
+  100%{
+    width: 100%;
   }
 }

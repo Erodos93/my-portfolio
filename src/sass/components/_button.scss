@@ -17,16 +17,27 @@
     background-image: url(../../assets/shared/desktop/arrow.svg);
     background-repeat: no-repeat;
     display: inline-block;
+    position: relative;
+    left: 25px;
     border: none;
     width: 9rem;
-    padding-right: 1rem;
+    
     height: 1.5rem;
     transform: scale(1);
   }
-  &__active{
+&__active{
+
     &:focus,
-    &:active{
+    &:active,
+    &:hover{
       outline: none;
+
+    }
+  &::before{
+      content:"";
+    width: 22rem;
+    position: absolute;
+    height: 2rem;
     }
     &:hover::after{
       background-position: 3rem 0;
@@ -34,8 +45,13 @@
       transform: scale(1.5);
       transition: all .2s;
     }
-    &:hover span{
+
+    &:hover  span{
       text-decoration: underline;
+      // background-color: $color-grey;
+      cursor: pointer;
+      // color: $color-dark;
+      outline: none;
     }
   }
 
@@ -121,7 +137,7 @@
   }
 }
 }
-@for $i from 5 through 16{
+@for $i from 1 through 16{
   .stories__big-collage{
     &:hover &__item--#{$i}:hover{
       &::after{
@@ -174,7 +190,7 @@
     @include button(3rem,3rem);
     position: relative;
     top: -3rem;
-    left: 28rem;
+    left: 25rem;
 
   }
   &__icon{

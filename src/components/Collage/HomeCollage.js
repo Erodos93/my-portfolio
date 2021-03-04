@@ -11,6 +11,7 @@ const HomeCollage =()=>{
       return(<CollageItem
         id={image.id}
         key={index}
+        date={image.date}
         altCollageImage={image.alt}
         title={image.title}
         nameUser={image.user}

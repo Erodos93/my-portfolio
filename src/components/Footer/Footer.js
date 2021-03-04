@@ -26,7 +26,7 @@ const Footer =()=>{
    return (<a href={`#${link.name}`} key={id} className="footer__link header-4">{link.name}</a>);
   })}
   </nav>
-  <ArrowButton className=" btn  footer__btn  btn__color--white" classTitle="footer__btn--title" text="Get an invite" classArrow="arrow--white"/>
+  <ArrowButton classButton=" btn  footer__btn  btn__color--white" classTitle="footer__btn--title" text="Get an invite" classArrow="arrow--white"/>
   <p className="copyright text-body">
   &copy;:Copyright 2019. All Rights Reserved</p>
   </div>

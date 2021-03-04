@@ -1,37 +1,49 @@
 import React from "react";
-import responsive from "../assets/features/desktop/responsive.svg";
-import noLimit from "../assets/features/desktop/no-limit.svg";
-import embed from "../assets/features/desktop/embed.svg";
+import ArrowButton from "./Button/ArrowButton";
+import FeatureCard from "./Features/FeatureCard";
+import {content} from "./objectContentsData";
 const Features =()=>{
-  return<section className="home-features" id="home-features">
-  <div className="home-feature">
-  <h3 className="home-feature__header header-3">100% Responsive</h3>
-  <p className="home-feature__text text-body">
-  No matter which the device you’re on, our site is fully responsive and stories
-  look beautiful on any screen.
-  </p>
-  <img src={responsive} alt="" className="home-feature__image"/>
-  </div>
-  <div className="home-feature">
-  <h3 className=" home-feature__header header-3">
-  No Photo Upload Limit
-  </h3>
-<p className="home-feature__text text-body">
-Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share
-all of your stories in one go.
-</p>
-  <img src={noLimit } alt="" className="home-feature__image"/>
-  </div>
-  <div className="home-feature">
-  <h3 className="home-feature__header header-3">
-  Available to Embed
-  </h3>
-  <p className="home-feature__text text-body">
-  Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google
-  Maps, and more.
-  </p>
-  <img src={embed} alt="" className="home-feature__image"/>
-  </div>
-  </section>
+
+  const renderCard=()=>{
+
+    return (content[0].featureCard.map((feature,index)=>{
+      console.log(feature.img);
+      return(<FeatureCard
+      img={feature.img}
+      classFeatureCard="feature"
+      content={feature.contentCard}
+      title={feature.title}/>);
+    }));
+  }
+  return(
+    <div className="features">
+
+    <div className="features__item">
+
+    <div className="features__image"></div>
+    <div className="features__main-title">
+    <h2 className="header-large-2">Features</h2>
+    <p className=" features__text text-body ">
+    We make sure all of our features are designed to be loved by every aspiring and even
+    professional photograpers who wanted to share their stories.
+    </p>
+    </div>
+
+    </div>
+
+    <div className="features__content">
+
+    {renderCard()}
+
+    </div>
+    <div className="features__invite-postcard">
+    <h1 className="features__second-title header-large-1">We're in Beta. Get your invite today!</h1>
+    <ArrowButton classButton=" btn features__btn btn__color--white" text="Get an invite" classArrow="arrow--white"/>
+    </div>
+
+
+    </div>
+  )
 }
+
 export default Features;

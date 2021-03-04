@@ -17,7 +17,7 @@
 
     //OPENED MENU
     &~ .mobile__nav{
-      height: 87rem;
+      height: 100vh;
       transition: height .5s;
     }
     //DISPLAYED LINKS
@@ -49,41 +49,61 @@
     }
   }
 }
+
+.checkedIcon{
+   &::before{
+     transform: rotate(45deg) translateY(0) ;
+   }
+   &::after{
+     transform: rotate(-45deg) translateY(0);
+   }
+}
+.uncheckedIcon{
+   &::before{
+     transform: rotate(0deg) translateY(-.5rem) !important ;
+   }
+   &::after{
+     transform: rotate(0deg) translateY(.5rem) !important;
+   }
+}
 //Float animation
 //Float Right-left
 
-.float{
-  &__center-to-leftSide{
-  animation: floatCLS 1.5s forwards;
-  backface-visibility: hidden;
-}
-  &__leftSide-to-center{
-  animation:  floatLSC 1.5s forwards;
-  backface-visibility: hidden;
-}
-&__rightSide-to-center{
-  animation: floatRSC 1.5s forwards;
-  backface-visibility: hidden;
-}
-&__down-to-up{
-  animation: floatDSUp 1.5s forwards;
-  backface-visibility: hidden;
-}
-&__up-to-down{
-  animation: floatUpDS 1.5s forwards;
-  backface-visibility: hidden;
-}
-&__rightSide-to-center{
-  animation: floatRSC 1.5s forwards;
-  backface-visibility: hidden;
-}
-}
-
-
-.disapere{
-  &__home-item{
-
-    animation: disapereHomeItem 1.5s forwards;
-    backface-visibility: hidden;
-  }
-}
+// .float{
+//   &__center-to-leftSide{
+//   animation: floatCLS 1.5s forwards !important;
+//   backface-visibility: hidden;
+// }
+//   &__leftSide-to-center{
+//   animation:  floatLSC 1.5s  .5s forwards;
+//   backface-visibility: hidden;
+// }
+// &__rightSide-to-center{
+//   animation: floatRSC 1.5s forwards;
+//   backface-visibility: hidden;
+// }
+// &__down-to-up{
+//   animation: floatDSUp 1.5s forwards;
+//   backface-visibility: hidden;
+// }
+// &__up-to-down{
+//   animation: floatUpDS 1.5s forwards;
+//   backface-visibility: hidden;
+// }
+// &__center-to-rightSide{
+//   animation: floatCRS 1.5s forwards !important;
+//   backface-visibility: hidden;
+// }
+// }
+//
+//
+// .disapere{
+//   &__home-item{
+//     animation: disapereItem 1.5s  forwards !important;
+//     backface-visibility: hidden;
+//   }
+//   &__story-item{
+//     animation: disapereItem 1.5s  forwards !important;
+//     backface-visibility: hidden;
+//   }
+// }

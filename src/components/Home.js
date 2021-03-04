@@ -1,8 +1,8 @@
 import React from "react";
 import ItemMainContent from "./Home/ItemMainContent";
 import HomeCollage from "./Collage/HomeCollage";
-import Features from "../components/Features";
-import {content} from "./Home/objectContentsData";
+import HomeFeatures from "../components/Home/HomeFeatures";
+import {content} from "./objectContentsData";
 const Home =()=>{
   return(
     <>
@@ -24,7 +24,7 @@ const Home =()=>{
     })}
    </main>
    <HomeCollage/>
-   <Features />
+   <HomeFeatures />
    </>
  );
 }

@@ -1,10 +1,11 @@
 .container{
   display: grid;
   grid-template-columns: [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end];
-  grid-template-rows: 3.6255vw min-content 50rem repeat(5, min-content);
+  grid-template-rows: 4.6255vw min-content 50rem repeat(5, min-content);
       @media only screen and (max-width: $mobile_resolution){
         grid-template-rows: 3.6255vw min-content 150rem repeat(5, min-content);
       }
+      overflow: hidden;
 }
 .home{
   display: grid;
@@ -45,7 +46,7 @@
       }
 }
 .home-features{
-  display: grid;
+    display: grid;
   grid-template-columns:repeat(auto-fit,minmax(25rem,1fr));
   grid-template-rows: min-content;
   @media only screen and (max-width: 1100px){
@@ -62,6 +63,74 @@
  grid-template-columns: min-content minmax(25vw, 1fr) min-content;
  grid-template-rows: 10vh 2rem 1fr;
 }
+
+.stories{
+  display: grid;
+  grid-template-rows: 65rem 200rem;
+  grid-template-columns: repeat(auto-fit,minmax(100%,min-content));
+  @media only screen and (max-width: 375px){
+    grid-template-rows: 80rem 200rem;
+  }
+  &__item{
+      display: grid;
+      grid-template-columns: 5vw min-content 1fr 5vw;
+      grid-template-rows:1fr;
+      @media only screen and (max-width:375px){
+        grid-template-columns: 2.5vw 1fr 2.5vw;
+        grid-template-rows:1fr min-content;
+      }
+  }
+  &__big-collage{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(31rem,1fr));
+    grid-template-rows:repeat(6,min-content);
+  }
+}
+.features{
+display: grid;
+
+grid-template-columns: minmax(5rem,1fr) repeat(12 , 1fr) minmax(5rem,1fr);
+grid-template-rows: repeat(3 , min-content);
+
+&__item{
+  display: grid;
+  grid-template-columns: minmax(55rem,1fr) minmax(83rem,1fr);
+  grid-template-rows: repeat(3,min-content);
+  @media only screen and (max-width: 450px){
+   grid-template-columns: minmax(100%,1fr);
+   grid-template-rows: 29rem min-content;
+  }
+}
+ &__main-title{
+ }
+ &__content{
+  display: grid;
+ 	grid-template-columns: repeat(auto-fit,minmax(31rem,1fr));
+   grid-template-rows: repeat(2,min-content);
+   @media only screen and (max-width: 450px){
+  grid-template-columns: repeat(auto-fit,minmax(30rem,34rem)) ;
+   }
+ }
+ &__invite-postcard{
+
+   display: grid;
+   grid-template-columns: minmax(2rem, 2fr) minmax(40rem, 1fr) 10fr 12fr minmax(2rem, 2fr);
+
+   grid-template-rows: repeat(3, 1fr);
+   @media only screen and (max-width: 678px){
+  grid-template-columns: minmax(5rem ,1fr) minmax(37rem,1fr) minmax(5rem ,1fr);
+  grid-template-rows: repeat(4, 1fr);
+   }
+ }
+}
+.feature{
+  display: grid;
+  justify-items:center;
+  align-items: center;
+  grid-template-columns: min-content minmax(25vw, 1fr) min-content;
+  grid-template-rows: 10vh 2rem 1fr;
+}
+
 .footer{
   display: grid;
   grid-template-columns: 1fr ;
@@ -69,10 +138,10 @@
 
   &__menu{
     display: grid;
-    grid-template-columns: minmax(16rem,max-content) repeat(auto-fit,minmax(15rem,1fr));
+    grid-template-columns: minmax(16rem,max-content) repeat(auto-fit,minmax(4rem,1fr));
     grid-template-rows: repeat(4,min-content);
     @media only screen and (max-width: 1000px){
-    grid-template-columns: minmax(32rem,max-content) repeat(auto-fit,minmax(15rem,1fr));
+    grid-template-columns: minmax(32rem,max-content) repeat(auto-fit,minmax(4rem,1fr));
     }
     @media only screen and (max-width:600px){
       grid-template-columns:1fr min-content 1fr;

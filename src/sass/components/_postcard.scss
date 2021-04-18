@@ -1,0 +1,29 @@
+.invite-postcard{
+  grid-column: 1/ -1;
+  background-image: url(../../assets/shared/desktop/bg-beta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: center;
+  height: 28rem;
+  &__second-title{
+    color: $color-white;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  &__btn{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    align-self: center;
+    display: flex;
+    justify-self:end;
+    width: unset;
+
+    @media only screen and (max-width:678px){
+      grid-column: 2 / 3;
+      grid-row: 4/ 5;
+      justify-self: start;
+
+    }
+  }
+}

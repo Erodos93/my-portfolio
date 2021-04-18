@@ -5,7 +5,7 @@ export const imageCollage=[{
   date:"April 16th 2020",
   alt:"Mountains",
   title:"The Mountains",
-  user:"John Appleseed"
+  user:"John Appleseed",
 },
 {
   id:2,

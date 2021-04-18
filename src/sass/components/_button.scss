@@ -5,12 +5,36 @@
   display: flex;
   justify-content: flex-start;
   text-transform: uppercase;
-  width: 100%;
+  width: 90%;
   &:focus,
   &:active{
     outline: none;
   }
 
+&__switch{
+display: inline-block;
+width: 6rem;
+height: 3.5rem;
+background-color: gray;
+border-radius: 20px;
+transform: translateX(0);
+cursor: pointer;
+
+&--checkbox{
+  display: none;
+}
+&::before{
+  content:"";
+  display: inline-block;
+  width: 3.5rem;
+  height:inherit;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  transform: translateX(0px);
+}
+margin-left: 2rem;
+}
 
   &::after{
     content: "";
@@ -21,7 +45,7 @@
     left: 25px;
     border: none;
     width: 9rem;
-    
+
     height: 1.5rem;
     transform: scale(1);
   }
@@ -48,9 +72,7 @@
 
     &:hover  span{
       text-decoration: underline;
-      // background-color: $color-grey;
       cursor: pointer;
-      // color: $color-dark;
       outline: none;
     }
   }
@@ -68,9 +90,6 @@
   outline: none;
   }
   }
-
-
-
   &__color{
     &--white{
       color:$color-white;
@@ -86,7 +105,6 @@
       color: $color-dark;
       background-color: transparent;
     }
-
   }
 }
 .menu{
@@ -176,7 +194,6 @@
       margin-bottom: -0.6rem;
 
     }
-
     transform: translateY(-50px);
     transition: all .5s;
   }
@@ -202,14 +219,11 @@
         height: 1px;
         display: block;
         position: absolute;
-
         transform: rotate(0);
         background-color: red;
         transition: all .2s;
         top: 1.5rem;
         left:.8rem;
-
-
       }
       &::before{
         transform: rotate(45deg) translateY(0) ;

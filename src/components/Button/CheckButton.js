@@ -1,5 +1,5 @@
 import React from "react";
-// import CheckButton from "./CheckButton";
+
 
 const CheckButton=({classButton,classIcon,classCheck,click,idToggle})=>{
   return <>

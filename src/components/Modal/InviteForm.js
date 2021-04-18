@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import CheckButton from "../Header/CheckButton";
+import CheckButton from "../Button/CheckButton";
 
 const InviteForm = ({fname,lname,email})=>{
   const closeInviteForm=()=>{

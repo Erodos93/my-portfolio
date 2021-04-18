@@ -1,150 +1,209 @@
-.container{
+.container {
   display: grid;
   grid-template-columns: [full-start] repeat(10, [col-start] 1fr [col-end]) [full-end];
   grid-template-rows: 4.6255vw min-content 50rem repeat(5, min-content);
-      @media only screen and (max-width: $mobile_resolution){
-        grid-template-rows: 3.6255vw min-content 150rem repeat(5, min-content);
-      }
-      overflow: hidden;
+  @media only screen and (max-width: $mobile_resolution) {
+    grid-template-rows: 3.6255vw min-content 150rem repeat(5, min-content);
+  }
+  overflow: hidden;
 }
-.home{
+.home {
   display: grid;
-  grid-template-rows: repeat(3,min-content);
-  &__item{
-    grid-template-columns:  min-content  minmax(27rem,1fr) min-content;
-    grid-template-rows: 60rem 1fr 1fr;
-    @media only screen and (max-width: 900px){
-      grid-template-columns: 1fr ;
-      grid-template-rows: repeat(3,min-content) ;
+  grid-template-rows: repeat(3, min-content);
+  &__item {
+    grid-template-columns: 35% minmax(27rem, 1fr) min-content;
+    grid-template-rows: minmax(min-content, 93.05vh) 1fr 1fr;
+
+    @media only screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, min-content);
     }
   }
-  @media only screen and (max-width: 375px){
-      grid-template-columns:1fr;
-     grid-template-rows: repeat(3,min-content);
+
+  @media only screen and (max-width: 375px) {
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(3, min-content);
   }
 }
-.collage{
+.collage {
   display: grid;
-  grid-template-columns:repeat(auto-fill,minmax(36rem,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
 
   grid-template-rows: min-content;
-  @media only screen and (max-width:1440px){
-      grid-template-columns:repeat(auto-fill,minmax(30rem,auto));
+  @media only screen and (max-width: 1440px) {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, auto));
+  }
+  @media only screen and (max-width: 1000px) {
+    grid-template-columns: repeat(auto-fill, minmax(46.625rem,auto));
+  }
+  @media only screen and (max-width: 745px) {
+
+    grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr));
   }
 
-  @media only screen and (max-width: $mobile_resolution){
-      grid-template-columns:min-content;
-      grid-template-rows: repeat(4,min-content);
+  @media only screen and (max-width: $mobile_resolution) {
+    grid-template-columns: min-content;
+    grid-template-rows: repeat(4, min-content);
   }
-&__item{
+  &__item {
     display: grid;
-      grid-template-columns:3vw repeat(auto-fit , minmax(15vw,1fr)) 3vw ;
-      grid-template-rows:  min-content min-content min-content ;
-      @media only screen and (max-width: 480px){
-        grid-template-columns:10vw repeat(auto-fit , minmax(80vw,1fr)) 10vw ;
-      }
-      }
+    grid-template-columns: 3rem minmax(28rem, 1fr) 3rem;
+    grid-template-rows: min-content min-content min-content;
+    @media only screen and (max-width: 480px) {
+      grid-template-columns: 10vw minmax(80vw, 1fr) 10vw;
+    }
+  }
 }
-.home-features{
-    display: grid;
-  grid-template-columns:repeat(auto-fit,minmax(25rem,1fr));
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-template-rows: min-content;
-  @media only screen and (max-width: 1100px){
-    grid-template-columns:min-content;
-    grid-template-rows: repeat(3,min-content);
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: min-content;
+    grid-template-rows: repeat(3, min-content);
   }
 }
-.home-feature{
+.home-feature {
   display: grid;
   grid-gap: 2rem;
-  @media only screen and (max-width: 1100px){
-     grid-template-columns: min-content minmax(80vw, 1fr) min-content;
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: min-content minmax(80vw, 1fr) min-content;
   }
- grid-template-columns: min-content minmax(25vw, 1fr) min-content;
- grid-template-rows: 10vh 2rem 1fr;
+  grid-template-columns: min-content minmax(25vw, 1fr) min-content;
+  grid-template-rows: 10vh 2rem 1fr;
 }
 
-.stories{
+.stories {
   display: grid;
-  grid-template-rows: 65rem 200rem;
-  grid-template-columns: repeat(auto-fit,minmax(100%,min-content));
-  @media only screen and (max-width: 375px){
-    grid-template-rows: 80rem 200rem;
+  grid-template-rows: 65rem min-content;
+  grid-template-columns: repeat(auto-fit, minmax(100%, min-content));
+  @media only screen and (max-width: 375px) {
+    grid-template-rows: 80rem min-content;
   }
-  &__item{
-      display: grid;
-      grid-template-columns: 5vw min-content 1fr 5vw;
-      grid-template-rows:1fr;
-      @media only screen and (max-width:375px){
-        grid-template-columns: 2.5vw 1fr 2.5vw;
-        grid-template-rows:1fr min-content;
-      }
-  }
-  &__big-collage{
+  &__item {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(31rem,1fr));
-    grid-template-rows:repeat(6,min-content);
+    grid-template-columns: 5vw min-content 1fr 5vw;
+    grid-template-rows: 1fr;
+    @media only screen and (max-width: 375px) {
+      grid-template-columns: 2.5vw 1fr 2.5vw;
+      grid-template-rows: 1fr min-content;
+    }
+  }
+  &__big-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    grid-template-rows: repeat(6, min-content);
   }
 }
-.features{
-display: grid;
-
-grid-template-columns: minmax(5rem,1fr) repeat(12 , 1fr) minmax(5rem,1fr);
-grid-template-rows: repeat(3 , min-content);
-
-&__item{
+.features {
   display: grid;
-  grid-template-columns: minmax(55rem,1fr) minmax(83rem,1fr);
-  grid-template-rows: repeat(3,min-content);
-  @media only screen and (max-width: 450px){
-   grid-template-columns: minmax(100%,1fr);
-   grid-template-rows: 29rem min-content;
+
+  grid-template-columns: minmax(5rem, 1fr) repeat(12, 1fr) minmax(5rem, 1fr);
+  grid-template-rows: repeat(3, min-content);
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    grid-template-rows: repeat(2, min-content);
+    @media only screen and (max-width: 450px) {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 34rem));
+    }
   }
 }
- &__main-title{
- }
- &__content{
-  display: grid;
- 	grid-template-columns: repeat(auto-fit,minmax(31rem,1fr));
-   grid-template-rows: repeat(2,min-content);
-   @media only screen and (max-width: 450px){
-  grid-template-columns: repeat(auto-fit,minmax(30rem,34rem)) ;
-   }
- }
- &__invite-postcard{
 
-   display: grid;
-   grid-template-columns: minmax(2rem, 2fr) minmax(40rem, 1fr) 10fr 12fr minmax(2rem, 2fr);
-
-   grid-template-rows: repeat(3, 1fr);
-   @media only screen and (max-width: 678px){
-  grid-template-columns: minmax(5rem ,1fr) minmax(37rem,1fr) minmax(5rem ,1fr);
-  grid-template-rows: repeat(4, 1fr);
-   }
- }
+.introductory {
+  &__item {
+    display: grid;
+    grid-template-columns: minmax(55rem, 1fr) minmax(83rem, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    @media only screen and (max-width: 450px) {
+      grid-template-columns: minmax(100%, 1fr);
+      grid-template-rows: 29rem min-content;
+    }
+  }
 }
-.feature{
+.feature {
   display: grid;
-  justify-items:center;
+  justify-items: center;
   align-items: center;
   grid-template-columns: min-content minmax(25vw, 1fr) min-content;
   grid-template-rows: 10vh 2rem 1fr;
 }
 
-.footer{
+.invite-postcard {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: minmax(2rem, 2fr) minmax(40rem, 1fr) 10fr 12fr minmax(
+      2rem,
+      2fr
+    );
+
+  grid-template-rows: repeat(3, 1fr);
+  @media only screen and (max-width: 678px) {
+    grid-template-columns: minmax(5rem, 1fr) minmax(37rem, 1fr) minmax(
+        5rem,
+        1fr
+      );
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+.pricing {
+  display: grid;
+  grid-template-columns: minmax(5rem, 1fr) repeat(12, 1fr) minmax(5rem, 1fr);
+  grid-template-rows: min-content repeat(5, min-content);
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30rem, 35rem));
+    grid-template-rows: min-content;
+    @media only screen and (min-width:400px) and (max-width: 900px) {
+      grid-template-columns: repeat(3, minmax(18rem, 35rem));
+
+    }
+    @media only screen and (max-width:400px){
+      grid-template-columns: minmax(39rem, 40rem);
+      grid-template-rows: repeat(3,min-content);
+    }
+  }
+  &__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,min-content);
+      @media only screen and (min-width:400px) and (max-width: 900px) {
+        grid-template-columns: minmax(63%,1fr) 1fr;
+        grid-template-rows: repeat(3,min-content);
+
+      }
+  }
+  &__card {
+
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: min-content .5fr min-content 1fr;
+    @media only screen and (min-width:400px) and (max-width: 900px) {
+      grid-template-columns: .6rem 3rem 1fr 1fr 3rem;
+    grid-template-rows: 5rem repeat(2,1fr) 3rem;
+    }
+  }
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: min-content;
 
-  &__menu{
+  &__menu {
     display: grid;
-    grid-template-columns: minmax(16rem,max-content) repeat(auto-fit,minmax(4rem,1fr));
-    grid-template-rows: repeat(4,min-content);
-    @media only screen and (max-width: 1000px){
-    grid-template-columns: minmax(32rem,max-content) repeat(auto-fit,minmax(4rem,1fr));
+    grid-template-columns: minmax(16rem, max-content) repeat(
+        auto-fit,
+        minmax(4rem, 1fr)
+      );
+    grid-template-rows: repeat(4, min-content);
+    @media only screen and (max-width: 1000px) {
+      grid-template-columns: minmax(32rem, max-content) repeat(
+          auto-fit,
+          minmax(4rem, 1fr)
+        );
     }
-    @media only screen and (max-width:600px){
-      grid-template-columns:1fr min-content 1fr;
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: 1fr min-content 1fr;
     }
   }
 }

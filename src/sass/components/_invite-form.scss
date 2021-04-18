@@ -1,6 +1,4 @@
-#invite{
-  // display: none;
-}
+
 .invite{
 
   &__background{
@@ -16,7 +14,7 @@
     color: white;
     align-items: center;
     justify-content: center;
-    border-radius: 100%;
+
     animation: biggerScale 1s forwards;
   }
   &__form{
@@ -47,8 +45,8 @@
   &:focus,
   &:hover{
     outline-offset: 3px;
-    outline: 6px dashed yellow;
-    transform: scale(1.1);
+    outline: 4px dashed #d9d9ac;
+    transform: scale(1.05);
     transition: transform .5s;
   }
   }

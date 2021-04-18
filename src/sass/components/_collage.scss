@@ -1,92 +1,115 @@
-
-$nameImg:"mountains","cityscapes","18-days-voyage","architecturals","world-tour",
-"unforeseen-corners","king-on-africa","trip-to-nowhere","rage-of-the-sea",
-"running-free","behind-the-waves","calm-waters","milky-way","dark-forest",
-"somwarpet","land-of-dreams";
+$nameImg: "mountains", "cityscapes", "18-days-voyage", "architecturals",
+  "world-tour", "unforeseen-corners", "king-on-africa", "trip-to-nowhere",
+  "rage-of-the-sea", "running-free", "behind-the-waves", "calm-waters",
+  "milky-way", "dark-forest", "somwarpet", "land-of-dreams";
 
 @for $i from 1 through 4 {
-$name:nth($nameImg, $i);
-.collage__image{
-  &--#{$i}{
-   @include storyCard("../../assets/stories/desktop/#{$name}.jpg","../../assets/stories/mobile/#{$name}.jpg ");
+  $name: nth($nameImg, $i);
+  .collage__image {
+    &--#{$i} {
+      @include storyCard(
+        "../../assets/stories/desktop/#{$name}.jpg",
+        "../../assets/stories/mobile/#{$name}.jpg "
+      );
+    }
   }
-}
 }
 @for $i from 1 through 16 {
-$name:nth($nameImg, $i);
-.stories__big-collage__image{
-  &--#{$i}{
-   @include storyCard("../../assets/stories/desktop/#{$name}.jpg","../../assets/stories/mobile/#{$name}.jpg ");
+  $name: nth($nameImg, $i);
+  .stories__big-collage__image {
+    &--#{$i} {
+      @include storyCard(
+        "../../assets/stories/desktop/#{$name}.jpg",
+        "../../assets/stories/mobile/#{$name}.jpg "
+      );
+    }
   }
 }
-}
-.collage{
-  grid-column: full-start / full-end;
-  grid-row:3 / 5;
+.collage {
+  grid-row: 2 / 3;
   animation: floatRSC 1.3s ease-in-out forwards;
-  @media only screen and (max-width: 480px){
+  @media only screen and (max-width: 480px) {
     grid-column-gap: 4rem;
   }
-  &__image{
-    height:50rem;
+  @media only screen and (max-width:745px) {
+    // max-width: 70vw;
+
+
+      grid-column: 1/ -1;
+  }
+  &__image {
+
+    height: 50vw;
+    min-height:37.5rem;
+    max-height:50rem;
+    min-width: 360px;
+    max-width: 100vw;
     background-repeat: no-repeat;
     object-fit: cover;
-    filter: brightness(.82);
+    filter: brightness(0.82);
     background-position: center;
     grid-column: 1 / -1;
-    grid-row: 1 / -1 ;
+    grid-row: 1 / -1;
     background-size: cover;
     transition: height 1.5s;
-    @media only screen and (max-width: $mobile_resolution){
-      width: 100vw;
-      height: 100vw;
+    @media only screen and (max-width:800px) {
+      height: 62.5rem;
+
+      min-width: 360px;
+      max-width: 100vw;
+      min-height:46.87rem;
+      max-height:62.5rem;
     }
+
+    @media only screen and (max-width:500px) {
+      max-width: 100vw;
+    }
+    @media only screen and (max-width: $mobile_resolution) {
+      width: 100vw;
+      max-width: 100vw;
+      // height: 100vw;
+    }
+
     position: relative;
     z-index: 10;
-    }
-  &__item{
-   transform: translateY(0);
-    justify-items:stretch;
+  }
+  &__item {
+    transform: translateY(0);
+    justify-items: stretch;
     cursor: pointer;
     position: relative;
     z-index: 20;
 
-
   }
-  &__label{
+  &__label {
     display: grid;
-    grid-row:3 /4;
-    grid-column:2 / span 1;
-    color:$color-white;
+    grid-row: 3 /4;
+    grid-column: 2 / span 1;
+    color: $color-white;
 
     padding-bottom: 1.5rem;
-    @media only screen and (max-width: 719px){
+    @media only screen and (max-width: 719px) {
       padding-bottom: 4.5rem;
-      grid-column:2 / span 2;
-
     }
-    @media only screen and (max-width: 480px){
-      grid-column:2 / span 1;
 
-    }
-    @media only screen and (max-width: $mobile_resolution){
+    @media only screen and (max-width: $mobile_resolution) {
       grid-column-gap: 2rem;
-      grid-row:3 /4;
-      grid-column:2 / span 1;
+      grid-row: 3 /4;
+      grid-column: 2 / span 1;
     }
-    &--text{
+    &--text {
       display: flex;
       flex-direction: column;
       padding-bottom: 2rem;
-      border-bottom: 1.5px solid rgba($color-grey, .4);
+      border-bottom: 1.5px solid rgba($color-grey, 0.4);
       position: relative;
       z-index: 20;
     }
-    & span{
-    width: 100%;
-    text-align: left;
+    & span {
+      width: 100%;
+      text-align: left;
     }
-    &--date{
+    &--date {
       opacity: 0;
       transition: opacity 1.5s;
     }

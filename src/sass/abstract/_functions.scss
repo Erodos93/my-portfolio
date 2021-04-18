@@ -1,46 +1,40 @@
-.menu{
-
-  &__checkbox:checked{
+.menu {
+  &__checkbox:checked {
     //TRANSFORM ICON IMAGE
 
-     + .menu__btn .menu__icon{
-        &::before{
-          transform: rotate(45deg) translateY(0) ;
-        }
-        &::after{
-          transform: rotate(-45deg) translateY(0);
-        }
-
-  }
-
-
+    + .menu__btn .menu__icon {
+      &::before {
+        transform: rotate(45deg) translateY(0);
+      }
+      &::after {
+        transform: rotate(-45deg) translateY(0);
+      }
+    }
 
     //OPENED MENU
-    &~ .mobile__nav{
+    & ~ .mobile__nav {
       height: 100vh;
-      transition: height .5s;
+      transition: height 0.5s;
     }
     //DISPLAYED LINKS
-    &~ .mobile__nav {
+    & ~ .mobile__nav {
       & .mobile__list {
-        & .mobile__link  {
+        & .mobile__link {
           display: block;
         }
       }
     }
-    &~ .mobile__nav {
+    & ~ .mobile__nav {
       & .mobile__links {
-        & .mobile__link  {
+        & .mobile__link {
           display: block;
         }
-
-    }
+      }
     }
     //CLOSED MENU
     &:not(:checked) {
-      &~ .mobile__nav {
-
-        & .mobile__list{
+      & ~ .mobile__nav {
+        & .mobile__list {
           height: 0;
           width: 100%;
           padding: 0 4rem;
@@ -50,22 +44,39 @@
   }
 }
 
-.checkedIcon{
-   &::before{
-     transform: rotate(45deg) translateY(0) ;
-   }
-   &::after{
-     transform: rotate(-45deg) translateY(0);
-   }
+.btn__switch {
+  &--checkbox {
+    &:checked {
+      & + .btn__switch {
+        &::before {
+          transform: translateX(30px);
+          transition: transform 0.3s;
+          background-color: white;
+        }
+      }
+    }
+    &:not(:checked) {
+      & + .btn__switch {
+        &::before {
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
+  //     & .btn__switch::before{
+  //       transform: translateX(2.8rem);
+  //
+  //     }
+  //   &:not(:checked){
+  //     & .btn__switch::before{
+  //         transform: translateX(0);
+  //
+  //     }
+  //
+  //
+  //   }
 }
-.uncheckedIcon{
-   &::before{
-     transform: rotate(0deg) translateY(-.5rem) !important ;
-   }
-   &::after{
-     transform: rotate(0deg) translateY(.5rem) !important;
-   }
-}
+
 //Float animation
 //Float Right-left
 

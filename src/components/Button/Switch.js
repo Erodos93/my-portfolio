@@ -4,7 +4,6 @@ import { checkSwitch } from "../../actions/func";
 const Switch = ({
   classCheck,
   idToggle,
-  btn__switch,
   classButton,
   classSwitch,
 }) => {
@@ -26,4 +25,4 @@ const Switch = ({
   );
 };
 export default Switch;
-// <div className="switch"></div>
+

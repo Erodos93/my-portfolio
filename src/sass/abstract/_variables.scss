@@ -1,6 +1,12 @@
-$color-main:("color-primary-1":#FFC593,"color-primary-2":#BC7198,"color-primary-3":#5A77FF);
-$color-dark:#000000;
-$color-grey:#DFDFDF;
-$color-white:#FFFFFF;
+$color-main: (
+  "color-primary-1": #ffc593,
+  "color-primary-2": #bc7198,
+  "color-primary-3": #5a77ff,
+);
+$color-dark: #000000;
+$color-grey: #dfdfdf;
+$color-white: #ffffff;
 
-$pallete-color-shadow:linear-gradient(to right top,#FFC593,#BC7198,#5A77FF);
+$pallete-color-shadow: linear-gradient(to right top, #ffc593, #bc7198, #5a77ff);
+$min-height-collage: 46.87rem;
+$max-height-collage: 62.5rem;

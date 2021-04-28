@@ -21,4 +21,4 @@ const InviteForm = ({fname,lname,email})=>{
 
 }
 export default InviteForm;
-// <div  className="close"><span className="close__icon"></span></div>
+

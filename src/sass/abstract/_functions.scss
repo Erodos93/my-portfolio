@@ -11,20 +11,16 @@
       }
     }
 
-    //OPENED MENU
-    & ~ .mobile__nav {
-      height: 100vh;
-      transition: height 0.5s;
-    }
     //DISPLAYED LINKS
     & ~ .mobile__nav {
+      //OPENED MENU
+      height: 100vh;
+      transition: height 0.5s;
       & .mobile__list {
         & .mobile__link {
           display: block;
         }
       }
-    }
-    & ~ .mobile__nav {
       & .mobile__links {
         & .mobile__link {
           display: block;
@@ -63,58 +59,4 @@
       }
     }
   }
-  //     & .btn__switch::before{
-  //       transform: translateX(2.8rem);
-  //
-  //     }
-  //   &:not(:checked){
-  //     & .btn__switch::before{
-  //         transform: translateX(0);
-  //
-  //     }
-  //
-  //
-  //   }
 }
-
-//Float animation
-//Float Right-left
-
-// .float{
-//   &__center-to-leftSide{
-//   animation: floatCLS 1.5s forwards !important;
-//   backface-visibility: hidden;
-// }
-//   &__leftSide-to-center{
-//   animation:  floatLSC 1.5s  .5s forwards;
-//   backface-visibility: hidden;
-// }
-// &__rightSide-to-center{
-//   animation: floatRSC 1.5s forwards;
-//   backface-visibility: hidden;
-// }
-// &__down-to-up{
-//   animation: floatDSUp 1.5s forwards;
-//   backface-visibility: hidden;
-// }
-// &__up-to-down{
-//   animation: floatUpDS 1.5s forwards;
-//   backface-visibility: hidden;
-// }
-// &__center-to-rightSide{
-//   animation: floatCRS 1.5s forwards !important;
-//   backface-visibility: hidden;
-// }
-// }
-//
-//
-// .disapere{
-//   &__home-item{
-//     animation: disapereItem 1.5s  forwards !important;
-//     backface-visibility: hidden;
-//   }
-//   &__story-item{
-//     animation: disapereItem 1.5s  forwards !important;
-//     backface-visibility: hidden;
-//   }
-// }

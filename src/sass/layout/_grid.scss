@@ -28,26 +28,15 @@
 .collage {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
-
   grid-template-rows: min-content;
-  @media only screen and (max-width: 1440px) {
-    grid-template-columns: repeat(auto-fill, minmax(30rem, auto));
-  }
-  @media only screen and (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, minmax(46.625rem,auto));
-  }
-  @media only screen and (max-width: 745px) {
+  @include grid-response-column(30rem, auto, $desktop_resolution);
+  @include grid-response-column(46.625rem, auto, 62.5em);
+  @include grid-response-column(36rem, 1fr, 46.5625em);
+  @include grid-response-column(true);
 
-    grid-template-columns: repeat(auto-fill, minmax(36rem, 1fr));
-  }
-
-  @media only screen and (max-width: $mobile_resolution) {
-    grid-template-columns: min-content;
-    grid-template-rows: repeat(4, min-content);
-  }
   &__item {
     display: grid;
-    grid-template-columns: 3rem minmax(28rem, 1fr) 3rem;
+    grid-template-columns: 3rem minmax(20rem, 1fr) 3rem;
     grid-template-rows: min-content min-content min-content;
     @media only screen and (max-width: 480px) {
       grid-template-columns: 10vw minmax(80vw, 1fr) 10vw;
@@ -70,7 +59,7 @@
     grid-template-columns: min-content minmax(80vw, 1fr) min-content;
   }
   grid-template-columns: min-content minmax(25vw, 1fr) min-content;
-  grid-template-rows: 10vh 2rem 1fr;
+  grid-template-rows: 5rem 2rem 1fr;
 }
 
 .stories {
@@ -154,33 +143,30 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(30rem, 35rem));
     grid-template-rows: min-content;
-    @media only screen and (min-width:400px) and (max-width: 900px) {
+    @media only screen and (min-width: 400px) and (max-width: 900px) {
       grid-template-columns: repeat(3, minmax(18rem, 35rem));
-
     }
-    @media only screen and (max-width:400px){
+    @media only screen and (max-width: 400px) {
       grid-template-columns: minmax(39rem, 40rem);
-      grid-template-rows: repeat(3,min-content);
+      grid-template-rows: repeat(3, min-content);
     }
   }
-  &__container{
+  &__container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3,min-content);
-      @media only screen and (min-width:400px) and (max-width: 900px) {
-        grid-template-columns: minmax(63%,1fr) 1fr;
-        grid-template-rows: repeat(3,min-content);
-
-      }
+    grid-template-rows: repeat(3, min-content);
+    @media only screen and (min-width: 400px) and (max-width: 900px) {
+      grid-template-columns: minmax(63%, 1fr) 1fr;
+      grid-template-rows: repeat(3, min-content);
+    }
   }
   &__card {
-
     display: grid;
     grid-template-columns: min-content 1fr min-content;
-    grid-template-rows: min-content .5fr min-content 1fr;
-    @media only screen and (min-width:400px) and (max-width: 900px) {
-      grid-template-columns: .6rem 3rem 1fr 1fr 3rem;
-    grid-template-rows: 5rem repeat(2,1fr) 3rem;
+    grid-template-rows: min-content 0.5fr min-content 1fr;
+    @media only screen and (min-width: 400px) and (max-width: 900px) {
+      grid-template-columns: 0.6rem 3rem 1fr 1fr 3rem;
+      grid-template-rows: 5rem repeat(2, 1fr) 3rem;
     }
   }
 }

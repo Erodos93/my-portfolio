@@ -40,7 +40,6 @@
     padding: 14.75rem 7.25rem;
     grid-column: 1 / 2;
     @media only screen and (max-width: 56.25em) {
-
     }
     @media only screen and (max-width: 600px) {
       margin: 0 auto;
@@ -127,6 +126,7 @@
     }
     &--3 {
       background-image: url(../../assets/home/desktop/designed-for-everyone.jpg);
+      background-position: top;
       @media only screen and (max-width: $tablet_resolution) {
         background-image: url(../../assets/home/tablet/designed-for-everyone.jpg);
       }

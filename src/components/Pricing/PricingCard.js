@@ -18,4 +18,4 @@ const PricingCard = ({ id, title, text, price, subscribe }) => {
   );
 };
 export default PricingCard;
-// <button className="btn__dark  header__btn text-body">Pick plan</button>
+
